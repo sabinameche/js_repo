@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id ="extra_btn" class="item-btn">Add Item</button>
+    <ul id="list">
+        
+        <li><button class="item-btn">A</button></li>
+        <li><button class="item-btn">B</button></li>
+        <li><button class="item-btn">C</button></li>
+        
+    </ul>
+    <script>
+      const element = document.getElementById("list");
+      element.addEventListener("click",function(e){
+        if(e.target.matches(".item-btn")){
+            console.log(`you clicked : ${e.target.textContent}`)
+        }
+      })
+      const element1= document.getElementById("extra_btn");
+      element1.addEventListener("click",myFunction);
+      let count=0;
+      function myFunction(){
+        const lists= document.createElement("li");
+        const buttons = document.createElement("button");
+        buttons.classList.add("item-btn");
+        const text = document.createTextNode(`button ${count++}`);
+        buttons.appendChild(text);
+        lists.appendChild(buttons);
+        element.appendChild(lists);
+      }
+    </script>
+</body>
+</html>
+
