@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb</title>
+</head>
+<body>
+    <img id="off"src="offbulb.png">
+    <button id="button" type="submit">Switch</button>
+    <script>
+        element=document.getElementById("button");
+        element.addEventListener("click",myFunction);
+        function myFunction(){
+            document.getElementById("off").src="onbulb.png";
+        }
+    </script>
+</body>
+</html>

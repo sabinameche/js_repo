@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Changer</title>
+</head>
+<body>
+    <button id="try" type="submit">Submit</button>
+    <script>
+        document.getElementById("try").onclick= myFunction;
+        function myFunction()
+        {
+            colors=["red","blue","green"];
+            colorindex=Math.floor(Math.random()*colors.length);
+            color=colors[colorindex]
+            document.body.style.backgroundColor=color
+        }
+    </script>
+</body>
+</html>

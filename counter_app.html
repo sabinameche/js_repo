@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter App</title>
+</head>
+<body>
+    <p id="show"></p>
+    <button id ="one">+</button>
+    <button id="two">-</button>
+    <script>
+        let count=0;
+        const addButton=document.getElementById("one");
+        const subtractButton= document.getElementById("two");
+        function myFunction(){
+            if(event.target.id === "one"){
+                count++;
+            }
+            else if(event.target.id === "two"){
+                count--;
+            }
+            document.getElementById("show").innerHTML=`${count}`;
+        }
+        addButton.addEventListener("click",myFunction);
+        subtractButton.addEventListener("click",myFunction);
+    </script>
+</body>
+</html>
